@@ -16,8 +16,8 @@ namespace Tcc
 
 	    var ordersGrouped = Order.GetOrders().
             GroupBy(
-                 order => order.ShipCountry,
-                  order => order.OrderID).
+                 order => order.country,
+                  order => order.id).
             ToDictionary(
                     group => group.Key,
                     group => group.ToList()
